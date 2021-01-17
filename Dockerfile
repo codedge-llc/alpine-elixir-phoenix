@@ -1,4 +1,4 @@
-FROM elixir:1.11.2-alpine
+FROM elixir:1.11.3-alpine
 
 MAINTAINER Henry Popp <henry@codedge.io>
 
@@ -6,7 +6,7 @@ MAINTAINER Henry Popp <henry@codedge.io>
 # is updated with the current date. It will force refresh of all
 # of the base images and things like `apt-get update` won't be using
 # old cached versions when the Dockerfile is built.
-ENV REFRESHED_AT=2020-11-07
+ENV REFRESHED_AT=2021-01-17
 
 # Install NPM
 RUN \
