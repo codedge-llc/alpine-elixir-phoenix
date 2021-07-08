@@ -1,4 +1,4 @@
-FROM elixir:1.12.1-alpine
+FROM elixir:1.12.2-alpine
 
 MAINTAINER Henry Popp <henry@codedge.io>
 
