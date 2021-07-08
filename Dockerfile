@@ -1,4 +1,4 @@
-FROM elixir:1.12.0-alpine
+FROM elixir:1.12.1-alpine
 
 MAINTAINER Henry Popp <henry@codedge.io>
 
@@ -20,7 +20,7 @@ RUN \
       curl \
       inotify-tools \
       nodejs \
-      nodejs-npm && \
+      npm && \
     npm install npm -g --no-progress && \
     update-ca-certificates --fresh && \
     rm -rf /var/cache/apk/*
