@@ -1,4 +1,4 @@
-FROM elixir:1.13.0-alpine
+FROM elixir:1.13.1-alpine
 
 MAINTAINER Henry Popp <henry@codedge.io>
 
