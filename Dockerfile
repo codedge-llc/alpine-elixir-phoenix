@@ -1,4 +1,4 @@
-FROM elixir:1.13.3-alpine
+FROM elixir:1.14.0-alpine
 
 MAINTAINER Henry Popp <henry@codedge.io>
 
@@ -10,20 +10,20 @@ ENV REFRESHED_AT=2022-01-10
 
 # Install NPM
 RUN \
-    mkdir -p /opt/app && \
-    chmod -R 777 /opt/app && \
-    apk update && \
-    apk --no-cache --update add \
-      make \
-      g++ \
-      wget \
-      curl \
-      inotify-tools \
-      nodejs \
-      npm && \
-    npm install npm -g --no-progress && \
-    update-ca-certificates --fresh && \
-    rm -rf /var/cache/apk/*
+  mkdir -p /opt/app && \
+  chmod -R 777 /opt/app && \
+  apk update && \
+  apk --no-cache --update add \
+  make \
+  g++ \
+  wget \
+  curl \
+  inotify-tools \
+  nodejs \
+  npm && \
+  npm install npm -g --no-progress && \
+  update-ca-certificates --fresh && \
+  rm -rf /var/cache/apk/*
 
 # Add local node module binaries to PATH
 ENV PATH=./node_modules/.bin:$PATH
